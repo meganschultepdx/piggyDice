@@ -11,6 +11,7 @@
 </head>
 <body class="container">
   <h1>Play Piggy Dice with a Friend (or a stranger)!</h1>
+  <hr>
   <p></p>
   <form id="nameInput">
     <div class="form-group">
@@ -28,11 +29,12 @@
     <div class="col-4">
       <h2>Player One</h2>
       <h3><span id="playerOneInput"></span></h3>
-      <h4><span id="playerOneScore"></span></h4>
+      <h4>Current Score: <span id="playerOneScore"></span></h4>
+
     </div>
     <div class="col-4">
-      <p id="die" align="center">0</p>
-      <span id="dieRoll"></span>
+      <p id="die" align="center"></p>
+      <!-- <span id="dieRoll"></span> -->
       <button type="button" class="btn-danger" id="playButton">PLAY</button>
       <button type="button" class="btn-warning" id="holdButton">HOLD</button>
 
@@ -41,6 +43,7 @@
       <h2>Player Two</h2>
       <h3><span id="playerTwoInput"></span></h3>
       <h4><span id="playerTwoScore"></span></h4>
+
     </div>
 
   </div>
