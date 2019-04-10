@@ -1,0 +1,10 @@
+#die {
+  border: 5px solid black;
+  padding: 30%;
+  border-radius: 10px;
+  font-size: 50px;
+}
+
+.col-4 {
+  text-align: center;
+}

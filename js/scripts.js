@@ -71,34 +71,15 @@ function attachContactListeners() {
 };
 
 $(document).ready(function() {
-// run the function attachContactListeners with no argument
-  attachContactListeners();
-//when submitted run the function below with the argument event
-  $("form#new-contact").submit(function(event) {
+  // attachContactListeners();
+  $("form#nameInput").submit(function(event) {
     event.preventDefault();
-  //creat a new variable called input#firstName and assign it the value jquery returned
-    var inputtedFirstName = $("input#new-first-name").val();
-    var inputtedLastName = $("input#new-last-name").val();
-    var inputtedPhoneNumber = $("input#new-phone-number").val();
-    var inputtedPersonalEmail = $("input#new-personal-email").val();
-    var inputtedWorkEmail = $("input#new-work-email").val();
-    var inputtedHomeAddress = $("input#new-home-address").val();
-    var inputtedSummerHomeAddress = $("input#new-summer-home-address").val();
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input#new-phone-number").val("");
-    //$("input#new-email").val("");
-    $("input#new-personal-email").val("");
-    $("input#new-work-email").val("");
-    $("input#new-home-address").val("");
-    $("input#new-summer-home-address").val("");
-  //creating a variable called newContact and assigning the value to a new instance of the contact object and passing/accepting three values
-    var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedPersonalEmail, inputtedWorkEmail, inputtedHomeAddress, inputtedSummerHomeAddress);
-//we're running the method addContact under the object addressBook and passing variable newContact
-    addressBook.addContact(newContact);
-//runs the displayContactDetails function passing the argument addressBook
-    displayContactDetails(addressBook);
-    }
+    var player1name = $("input#playerOneName").val();
+    var player2name = $("input#playerTwoName").val();
+    $("#nameInput").hide();
+    $("#playerOneInput").text(player1name);
+    $("#playerTwoInput").text(player2name);
+    console.log(player1name, player2name);
   })
 })
 
