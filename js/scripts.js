@@ -27,10 +27,10 @@ function currentRoll() {
   // currentScore += result;
     if (result === 1) {
       currentScore = -1;
-      currentScore.reset();
+
       alert("Womp womp. You rolled a 1. Your turn is over.");
     } else {
-      currentRoll;
+      currentScore;
     }
   return result;
 };

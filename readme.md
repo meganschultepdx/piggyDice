@@ -21,12 +21,16 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 ## Specs
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| asfasfasf | asfasf | asfasf |
-| asfasf | asfas | fasfasf |
-| asfasf | asfasf | asfasf |
-| asfasf | asfasfasf | asfasfasf |
-| asfasf | asfasf | asfasf | 
-
+| 3. Roll a "1" | 1 | Score goes to zero, and turn goes to next player |
+| 4. Roll another number | 2-6 | Roll value is totaled, player can decide to continue or hold |
+| 6. Player decides to hold | press hold button | Roll value is totaled. Turn goes to next player |
+| 7. Turn goes to next player | when a 1 is rolled, or hold button is pressed | Turn goes to next player, roll function restarts for next player. |
+| 8. Game is over when someone reaches 100 or more points. | Total score of one player >= 100 | Declares that player as the winner. Does something fun.4 |
+| 1. add player1 and player2 info | name player 1, name payer 2 | namePlayer1, player1 initial score, namePlayer2, player2 initial score |
+| 2. player1 clicks play button | click function for play button | click function makes dice roll function happen |
+| 5. player1 decides to continue | hits play button again | click function makes dice roll function happen |
+| | | |
+| | | | 
 
 
 
