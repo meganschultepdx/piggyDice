@@ -1,16 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>PiggyDice</title>
-  </head>
-  <body class="container">
-    <h1>Play Piggy Dice with a Friend (or a stranger)!</h1>
-     <p></p>
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>PiggyDice</title>
+</head>
+<body class="container">
+  <h1>Play Piggy Dice with a Friend (or a stranger)!</h1>
+  <p></p>
+  <form id="nameInput">
+    <div class="form-group">
+      <label for="playerOne">Player One Name</label>
+      <input type="text"  class="form-control" id="playerOneName">
+    </div>
+    <div class="form-group">
+      <label for="playerTwo">Player Two Name</label>
+      <input type="text"  class="form-control" id="playerTwoName">
+    </div>
+    <button type="submit" class="btn-primary">Submit</button>
+  </form>
 
-  </body>
+  <div class="row">
+    <div class="col-4">
+      <h2>Player One</h2>
+      <h3><span id="playerOneInput"></span></h3>
+      <h4><span id="playerOneScore"></span></h4>
+    </div>
+    <div class="col-4">
+      <span id="dieRoll"></span>
+      <button type="button" class="btn-danger" id="playButton">PLAY</button>
+      <button type="button" class="btn-warning" id="holdButton">HOLD</button>
+
+    </div>
+    <div class="col-4">
+      <h2>Player Two</h2>
+      <h3><span id="playerTwoInput"></span></h3>
+      <h4><span id="playerTwoScore"></span></h4>
+    </div>
+
+  </div>
+
+
+</body>
 </html>
