@@ -25,12 +25,12 @@ var currentScore = 0;
 function currentRoll() {
   var result = (Math.floor(Math.random() * 6) +1);
   // currentScore += result;
-  // console.log(playerScore);
     if (result === 1) {
       currentScore = -1;
+      currentScore.reset();
       alert("Womp womp. You rolled a 1. Your turn is over.");
     } else {
-      currentScore;
+      currentRoll;
     }
   return result;
 };

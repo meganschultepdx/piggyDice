@@ -1,3 +1,7 @@
+h1  {
+  text-align: center;
+}
+
 #die {
   border: 5px solid black;
   padding: 30%;
