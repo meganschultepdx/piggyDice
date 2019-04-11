@@ -68,9 +68,9 @@ function currentRoll() {
         playerOne.currentScore += result;
         $("#playerOneScore").text(playerOne.currentScore);
         $("#die").text(result);
-
-        if (playerOne.currentScore >= 10) {
-          console.log("yay");
+      if (playerOne.currentScore >= 10) {
+        $("#winner").show();
+        $(".row").hide();
         }
       }
       return false;
@@ -86,9 +86,9 @@ function currentRoll() {
         playerTwo.currentScore += result;
         $("#playerTwoScore").text(playerTwo.currentScore);
         $("#die").text(result);
-
-        if (playerTwo.currentScore >= 10) {
-          console.log("yay");
+      if (playerTwo.currentScore >= 10) {
+        $("#winner").show();
+        $(".row").hide();
       }
       return false;
     }
@@ -117,4 +117,7 @@ $(document).ready(function() {
     event.preventDefault();
     game.holdSwitch();
   });
+
+  // $("#winner").hide();
+
 });

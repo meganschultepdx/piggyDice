@@ -22,14 +22,14 @@
       <label for="playerTwo">Player Two Name</label>
       <input type="text"  class="form-control" id="playerTwoName">
     </div>
-    <button type="submit" class="btn-primary">Submit</button>
+    <button type="submit" class="btn-dark">Submit</button>
   </form>
 
-  <div class="row" align="center">
+  <div id="play" class="row" align="center">
     <div class="col-md-4">
-      <h2>Player One</h2>
+      <h2>Player One 🐷</h2>
       <h3><span id="playerOneInput"></span></h3>
-      <h4>Current Score</h4>
+      <h4>Score</h4>
       <span id="playerOneScore"></span>
 
     </div>
@@ -37,18 +37,19 @@
       <p id="die"></p>
       <button type="button" class="btn-danger" id="playButton">PLAY</button>
       <button type="button" class="btn-warning" id="holdButton">HOLD</button>
-
     </div>
     <div class="col-md-4">
-      <h2>Player Two</h2>
+      <h2>Player Two 🐷</h2>
       <h3><span id="playerTwoInput"></span></h3>
-      <h4>Current Score</h4>
+      <h4>Score</h4>
       <span id="playerTwoScore"></span>
-
     </div>
-
   </div>
 
+  <div id="winner">
+    <p>Congrats you won Piggy Dice!!</p>
+    <img src="img/cheerspig.jpeg" alt="picture of pigs cheersing with martinis">
+  </div>
 
 </body>
 </html>

@@ -1,7 +1,22 @@
-h1  {
-  text-align: center;
+body {
+  background-color: #ffb3d9;
 }
 
+h1  {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 75px;
+}
+
+/* .form-group {
+  text-align: center;
+  align-content: center;
+} */
+
+input {
+  resize: horizontal;
+  width: 100px;
+}
 #die {
   border: 5px solid black;
   padding: 19%;
@@ -9,6 +24,7 @@ h1  {
   font-size: 50px;
   width: 200px;
   height: 200px;
+  background-color: white;
 }
 
 #playerOneScore, #playerTwoScore {
@@ -17,4 +33,24 @@ h1  {
 
 #playButton, #holdButton {
   margin: auto;
+}
+
+#playerOneName {
+  width: 500px;
+}
+
+#playerTwoName {
+  width: 500px;
+}
+
+#winner {
+  display: none;
+  text-align: center;
+  font-size: 70px;
+  color: purple;
+
+}
+
+img {
+  width: 75%;
 }
