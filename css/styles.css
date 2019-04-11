@@ -4,15 +4,17 @@ h1  {
 
 #die {
   border: 5px solid black;
-  padding: 30%;
+  padding: 19%;
   border-radius: 10px;
   font-size: 50px;
   width: 200px;
   height: 200px;
-
 }
 
-.col-md-4 {
-  align-items: center;
-  text-align: center;
+#playerOneScore, #playerTwoScore {
+  font-size: 30pt;
+}
+
+#playButton, #holdButton {
+  margin: auto;
 }

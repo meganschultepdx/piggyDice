@@ -6,8 +6,8 @@ function PiggyDice(player) {
 }
 
 PiggyDice.prototype.addPlayer = function(player) {
-  player.id = this.assignId();
-  this.players.push(player);
+  player.id = this.assignId(),
+  this.players.push(player)
 }
 
 PiggyDice.prototype.assignId = function() {
@@ -19,7 +19,6 @@ PiggyDice.prototype.assignId = function() {
 function Player(playerName) {
   this.playerName = playerName,
   this.currentScore = 0,
-  this.totalScore = 0,
   this.currentId = 0,
   this.isActive = false
 }
@@ -35,7 +34,6 @@ PiggyDice.prototype.getActiveIndex = function(){
 
 PiggyDice.prototype.switchActive = function() {
   var activeIndex = this.getActiveIndex();
-  console.log(activeIndex);
   if (activeIndex === 0){
     this.players[0].isActive = false;
     this.players[1].isActive = true;
@@ -44,6 +42,11 @@ PiggyDice.prototype.switchActive = function() {
     this.players[1].isActive = false;
   }
 }
+
+PiggyDice.prototype.holdSwitch = function(){
+  this.switchActive();
+}
+
 var playerOne = new Player();
 var playerTwo = new Player();
 var game = new PiggyDice();
@@ -58,13 +61,17 @@ function currentRoll() {
       if (result === 1) {
         playerOne.currentScore = 0;
         $("#playerOneScore").text(playerOne.currentScore);
-        alert("Womp womp. You rolled a 1. Your turn is over.");
+        $("#die").text(1);
+        // alert("Womp womp. You rolled a 1. Your turn is over.");
         game.switchActive();
       } else {
         playerOne.currentScore += result;
-        console.log(playerOne.currentScore);
         $("#playerOneScore").text(playerOne.currentScore);
         $("#die").text(result);
+
+        if (playerOne.currentScore >= 10) {
+          console.log("yay");
+        }
       }
       return false;
     }
@@ -72,14 +79,20 @@ function currentRoll() {
       if (result === 1) {
         playerTwo.currentScore = 0;
         $("#playerTwoScore").text(playerTwo.currentScore);
-        alert("Womp womp. You rolled a 1. Your turn is over.");
+        $("#die").text(1);
+        // alert("Womp womp. You rolled a 1. Your turn is over.");8888
         game.switchActive();
       } else {
         playerTwo.currentScore += result;
         $("#playerTwoScore").text(playerTwo.currentScore);
         $("#die").text(result);
+
+        if (playerTwo.currentScore >= 10) {
+          console.log("yay");
       }
       return false;
+    }
+
     }
 };
 
@@ -98,9 +111,10 @@ $(document).ready(function() {
   });
   $("button#playButton").click(function(event) {
     event.preventDefault();
-    // console.log("sdfs");
     currentRoll();
-    // var current = currentScore += result;
-
+  });
+  $("button#holdButton").click(function(event){
+    event.preventDefault();
+    game.holdSwitch();
   });
 });
